@@ -1,14 +1,17 @@
-function getComputerChoice(max) {
-    return Math.floor(Math.random() * max);
+function getComputerChoice() {
+    return Math.floor(Math.random() * 3);
 }
 
 function getHumanChoice() {
-    return humanChoice = prompt("Choose one:\n0 for rock\n1 for paper\n2 for scissor");
+    return humanChoice = prompt("Enter your Choice: ");
 }
 
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound( humanChoice, getComputerChoice ) {
+
+}
 
 
 /* PSEUDOCODE
