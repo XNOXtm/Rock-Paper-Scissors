@@ -9,7 +9,7 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound( humanChoice, getComputerChoice ) {
+function playRound( humanChoice, ComputerChoice ) {
 
 }
 
