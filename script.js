@@ -1,17 +1,17 @@
 function getComputerChoice() {
-    num = Math.floor(Math.random() * 3);
+    let num = Math.floor(Math.random() * 3);
     if (num === 0) {
-        return "Stone";
+        return "stone";
     } else if (num === 1) {
-        return "Paper";
+        return "paper";
     } else {
-        return "Scissor";
+        return "scissor";
     };
 }
-console.log(getComputerChoice())
 
 function getHumanChoice() {
-    return humanChoice = prompt("Enter your Choice: ");
+    let choice = humanChoice = prompt("Enter your Choice: ");
+    return choice.toLowerCase();
 }
 
 let humanScore = 0;
