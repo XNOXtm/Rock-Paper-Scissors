@@ -6,7 +6,11 @@ function getHumanChoice() {
     return humanChoice = prompt("Choose one:\n0 for rock\n1 for paper\n2 for scissor");
 }
 
+let humanScore = 0;
+let computerScore = 0;
 
-/*
+
+
+/* PSEUDOCODE
 
 */
