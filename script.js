@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3);
     if (num === 0) {
@@ -14,8 +17,8 @@ function getHumanChoice() {
     return humanChoice.toLowerCase();
 }
 
-let humanScore = 0;
-let computerScore = 0;
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 function playRound( humanChoice, ComputerChoice ) {
     if (humanSelection === computerSelection) {
@@ -34,36 +37,13 @@ function playRound( humanChoice, ComputerChoice ) {
 
     } else {
         console.log("Enter a Valid Choice !!!");
-    }
-}
-
-let count = 0;
-
-function playGame() {
-    playRound( humanSelection, computerSelection);
-    console.log(`Your score: ${humanScore} \nComputer score: ${computerScore}`); 
-    count++;
-}
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-while (count < 5) {
-    playGame();
+    };
 }
 
 
-/* 
-1. Take humanchoice (out of rock, paper, scissor).
-2. Get computerschoice 
-3. Compare both inputs:
-    if both rock || scissor || stone:
-        draw
-    else if (computerchoice = stone && humanchoice = paper) || (computerchoice = paper && humanchoice = scissor) || (computerchoice = scissor && humanchoice = stone) :
-        you won {humanchoice} beats {computchoice}
-        humanscore += 1
-    else :
-        you lost {computerchoice} beat {humanchoice}
-        computerscore += 1
-    
-*/
+playRound( humanSelection, humanSelection );
+console.log(humanScore);
+console.log(computerScore)
+
+
+
