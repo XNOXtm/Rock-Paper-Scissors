@@ -1,6 +1,14 @@
 function getComputerChoice() {
-    return Math.floor(Math.random() * 3);
+    num = Math.floor(Math.random() * 3);
+    if (num === 0) {
+        return "Stone";
+    } else if (num === 1) {
+        return "Paper";
+    } else {
+        return "Scissor";
+    };
 }
+console.log(getComputerChoice())
 
 function getHumanChoice() {
     return humanChoice = prompt("Enter your Choice: ");
@@ -14,7 +22,7 @@ function playRound( humanChoice, ComputerChoice ) {
 }
 
 function playGame() {
-    
+
 }
 
 const humanSelection = getHumanChoice();
