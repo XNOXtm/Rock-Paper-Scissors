@@ -10,8 +10,13 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let choice = humanChoice = prompt("Enter your Choice: ");
-    return choice.toLowerCase();
+    let humanChoice = prompt("Enter your Choice: ");
+    if (humanChoice.toLowerCase() === "paper" || "scissor" || "stone") {
+        return humanChoice;
+    } else {
+        console.log("Enter Valid Choice !!")
+    }
+    
 }
 
 let humanScore = 0;
