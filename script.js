@@ -24,27 +24,33 @@ function playRound( humanChoice, ComputerChoice ) {
 
     } else if ( (computerSelection === "stone" && humanSelection === "paper") || (computerSelection === "paper" && humanSelection === "scissor") || (computerSelection === "scissor" && humanSelection === "stone") ) {
 
-        console.log(`You won! ${humanSelection} beats ${computerSelection}`);
         humanScore += 1;
+        console.log(`You won! ${humanSelection} beats ${computerSelection}`);
 
     } else if ( (humanSelection === "stone" && computerSelection === "paper") || (humanSelection === "paper" && computerSelection === "scissor") || (humanSelection === "scissor" && computerSelection === "stone") ) {
 
-        console.log(`!!You lost ${computerSelection} beats ${humanSelection}`);
         computerScore += 1;
+        console.log(`!!You lost ${computerSelection} beats ${humanSelection}`);
 
     } else {
         console.log("Enter a Valid Choice !!!");
     }
 }
 
-function playGame() {
+let count = 0;
 
+function playGame() {
+    playRound( humanSelection, computerSelection);
+    console.log(`Your score: ${humanScore} \nComputer score: ${computerScore}`); 
+    count++;
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+while (count < 5) {
+    playGame();
+}
 
 
 /* 
