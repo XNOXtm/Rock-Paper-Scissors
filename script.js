@@ -10,13 +10,8 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("Enter your Choice: ");
-    if (humanChoice.toLowerCase() === "paper" || "scissor" || "stone") {
-        return humanChoice;
-    } else {
-        console.log("Enter Valid Choice !!")
-    }
-    
+    let humanChoice = prompt("Enter your Choice: \nStone  Paper  Scissor ");
+    return humanChoice.toLowerCase();
 }
 
 let humanScore = 0;
@@ -24,13 +19,21 @@ let computerScore = 0;
 
 function playRound( humanChoice, ComputerChoice ) {
     if (humanSelection === computerSelection) {
+
         console.log(`Draw! You both choose ${humanSelection}`);
+
     } else if ( (computerSelection === "stone" && humanSelection === "paper") || (computerSelection === "paper" && humanSelection === "scissor") || (computerSelection === "scissor" && humanSelection === "stone") ) {
+
         console.log(`You won! ${humanSelection} beats ${computerSelection}`);
         humanScore += 1;
-    } else {
-        console.log(`You lost. ${computerSelection} beats ${humanSelection}`);
+
+    } else if ( (humanSelection === "stone" && computerSelection === "paper") || (humanSelection === "paper" && computerSelection === "scissor") || (humanSelection === "scissor" && computerSelection === "stone") ) {
+
+        console.log(`!!You lost ${computerSelection} beats ${humanSelection}`);
         computerScore += 1;
+
+    } else {
+        console.log("Enter a Valid Choice !!!");
     }
 }
 
