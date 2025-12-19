@@ -23,27 +23,30 @@ const computerSelection = getComputerChoice();
 function playRound( humanChoice, ComputerChoice ) {
     if (humanSelection === computerSelection) {
 
-        console.log(`Draw! You both choose ${humanSelection}`);
+        return `Draw! You both choose ${humanSelection}`;
 
     } else if ( (computerSelection === "stone" && humanSelection === "paper") || (computerSelection === "paper" && humanSelection === "scissor") || (computerSelection === "scissor" && humanSelection === "stone") ) {
 
         humanScore += 1;
-        console.log(`You won! ${humanSelection} beats ${computerSelection}`);
+        return `You won! ${humanSelection} beats ${computerSelection}`;
 
     } else if ( (humanSelection === "stone" && computerSelection === "paper") || (humanSelection === "paper" && computerSelection === "scissor") || (humanSelection === "scissor" && computerSelection === "stone") ) {
 
         computerScore += 1;
-        console.log(`!!You lost ${computerSelection} beats ${humanSelection}`);
+        return `!!You lost ${computerSelection} beats ${humanSelection}`;
 
     } else {
-        console.log("Enter a Valid Choice !!!");
+        return "Enter a Valid Choice !!!";
     };
 }
 
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound( humanSelection, humanSelection ));
+    }
+}
 
-playRound( humanSelection, humanSelection );
-console.log(humanScore);
-console.log(computerScore)
+playGame();
 
 
 
