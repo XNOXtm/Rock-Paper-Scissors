@@ -13,6 +13,10 @@ function playRound( humanChoice, ComputerChoice ) {
 
 }
 
+function playGame() {
+    
+}
+
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
