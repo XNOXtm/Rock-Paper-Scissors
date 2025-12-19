@@ -13,6 +13,11 @@ function playRound( humanChoice, ComputerChoice ) {
 
 }
 
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
 
 /* PSEUDOCODE
 
