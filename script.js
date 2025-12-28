@@ -12,12 +12,7 @@ function getComputerChoice() {
         return "scissor";
     };
 }
-const computerSelection = getComputerChoice();
 
-// function getHumanChoice() {
-//     let humanChoice = prompt("Enter your Choice: \nStone  Paper  Scissor ");
-//     return humanChoice.toLowerCase();
-// }
 
 function playRound( humanSelection, computerSelection ) {
     if (humanSelection === computerSelection) {
@@ -45,18 +40,18 @@ const paper = document.getElementById("Paper");
 const scissor = document.getElementById("Scissor");
 
 rock.addEventListener("click", () => {
-    playRound("stone", computerSelection);
-    console.log("button was registerd");
+    const computerSelection = getComputerChoice();
+    console.log(playRound("stone", computerSelection));
 });
 
 paper.addEventListener("click", () => {
-    playRound("paper", computerSelection);
-    console.log("button was registerd"); 
+    const computerSelection = getComputerChoice();
+    console.log(playRound("paper", computerSelection));
 });
 
 scissor.addEventListener("click", () => {
-    playRound("scissor", computerSelection);
-    console.log("button was registerd");
+    const computerSelection = getComputerChoice();
+    console.log(playRound("scissor", computerSelection));
 });
 
 // function playGame() {
