@@ -55,6 +55,10 @@ function playGame() {
 
 playGame();
 
+const rock = document.getElementById("Rock");
+const paper = document.getElementById("Paper");
+const scissor = document.getElementById("Scissor");
+
 
 
 
