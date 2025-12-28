@@ -12,6 +12,7 @@ function getComputerChoice() {
         return "scissor";
     };
 }
+const computerSelection = getComputerChoice();
 
 // function getHumanChoice() {
 //     let humanChoice = prompt("Enter your Choice: \nStone  Paper  Scissor ");
@@ -38,26 +39,41 @@ function playRound( humanSelection, computerSelection ) {
     };
 }
 
-function playGame() {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-        
-    console.log(playRound( humanSelection, computerSelection ));
-    
-    if (humanScore > computerScore) {
-        console.log("Congratulations!! You won the overall game")
-    } else if (humanScore < computerScore) {
-        console.log("Sorry!! \n Unfortunetly you lost to computer")
-    } else {
-        console.log("Aww its a draw ")
-    };
-}
-
-playGame();
-
+// playGame();
 const rock = document.getElementById("Rock");
 const paper = document.getElementById("Paper");
 const scissor = document.getElementById("Scissor");
+
+rock.addEventListener("click", () => {
+    playRound("stone", computerSelection);
+    console.log("button was registerd");
+});
+
+paper.addEventListener("click", () => {
+    playRound("paper", computerSelection);
+    console.log("button was registerd"); 
+});
+
+scissor.addEventListener("click", () => {
+    playRound("scissor", computerSelection);
+    console.log("button was registerd");
+});
+
+// function playGame() {
+//     const humanSelection = getHumanChoice();
+//     const computerSelection = getComputerChoice();
+        
+//     console.log(playRound( humanSelection, computerSelection ));
+    
+//     if (humanScore > computerScore) {
+//         console.log("Congratulations!! You won the overall game")
+//     } else if (humanScore < computerScore) {
+//         console.log("Sorry!! \n Unfortunetly you lost to computer")
+//     } else {
+//         console.log("Aww its a draw ")
+//     };
+// }
+
 
 
 
