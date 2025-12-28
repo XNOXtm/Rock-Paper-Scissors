@@ -13,10 +13,10 @@ function getComputerChoice() {
     };
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Enter your Choice: \nStone  Paper  Scissor ");
-    return humanChoice.toLowerCase();
-}
+// function getHumanChoice() {
+//     let humanChoice = prompt("Enter your Choice: \nStone  Paper  Scissor ");
+//     return humanChoice.toLowerCase();
+// }
 
 function playRound( humanSelection, computerSelection ) {
     if (humanSelection === computerSelection) {
@@ -54,6 +54,8 @@ function playGame() {
 }
 
 playGame();
+
+
 
 
 
