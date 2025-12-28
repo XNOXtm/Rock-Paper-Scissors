@@ -39,15 +39,10 @@ function playRound( humanSelection, computerSelection ) {
 }
 
 function playGame() {
-    let roundCount = 1;
-    while (roundCount <= 5) {
-        console.log("Round " + roundCount + " :");
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
         
-        console.log(playRound( humanSelection, computerSelection ));
-        roundCount++;
-    };
+    console.log(playRound( humanSelection, computerSelection ));
     
     if (humanScore > computerScore) {
         console.log("Congratulations!! You won the overall game")
