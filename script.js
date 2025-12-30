@@ -13,7 +13,6 @@ function getComputerChoice() {
     };
 }
 
-
 function playRound( humanSelection, computerSelection ) {
     if (humanSelection === computerSelection) {
         
@@ -53,21 +52,6 @@ scissor.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
     console.log(playRound("scissor", computerSelection));
 });
-
-// function playGame() {
-//     const humanSelection = getHumanChoice();
-//     const computerSelection = getComputerChoice();
-        
-//     console.log(playRound( humanSelection, computerSelection ));
-    
-//     if (humanScore > computerScore) {
-//         console.log("Congratulations!! You won the overall game")
-//     } else if (humanScore < computerScore) {
-//         console.log("Sorry!! \n Unfortunetly you lost to computer")
-//     } else {
-//         console.log("Aww its a draw ")
-//     };
-// }
 
 
 
