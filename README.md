@@ -1,5 +1,8 @@
-This is a Stone Paper Scissor game which runs entirly through console.
+This is a simple Rock Paper Scissor game.
 
-Will add front end interaction as I learn more things. Had a lot of fun during this challege. It was preety simple though the repetition of rounds five times was a bit tough. Still I made it somehow via googling about while loops and fixing the variable calls somehow(that was irritating af).
+Made while learing JavaScript. With minimal UI styling. Learned a lot about DOM methods and js fundamentals.
 
-Learn a lot about function, variables, conditionals, and somewhat of loop.
+HOW TO PLAY:
+    1. Select you preferred choice out of the Three.
+    2. Play until one of you(computer or user) scored 5 points.
+    3. Referesh the page to Restart the game.
