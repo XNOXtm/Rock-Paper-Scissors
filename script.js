@@ -16,21 +16,24 @@ function getComputerChoice() {
 function playRound( humanSelection, computerSelection ) {
     if (humanSelection === computerSelection) {
         
-        return `Draw! You both choose ${humanSelection}`;
-        
+        const container = document.querySelector("#result-announcement");
+
+        container.textContent = `Draw you both choose ${humanSelection}`;
+
     } else if ( (computerSelection === "stone" && humanSelection === "paper") || (computerSelection === "paper" && humanSelection === "scissor") || (computerSelection === "scissor" && humanSelection === "stone") ) {
         
         humanScore += 1;
-        return `You won! ${humanSelection} beats ${computerSelection}`;
-        
-    } else if ( (humanSelection === "stone" && computerSelection === "paper") || (humanSelection === "paper" && computerSelection === "scissor") || (humanSelection === "scissor" && computerSelection === "stone") ) {
-        
-        computerScore += 1;
-        return `!!You lost ${computerSelection} beats ${humanSelection}`;
+        const container = document.querySelector("#result-announcement");
+
+        container.textContent = `You won! ${humanSelection} beats ${computerSelection}`;
         
     } else {
-        return "Enter a Valid Choice !!!";
-    };
+        
+        computerScore += 1;
+        const container = document.querySelector("#result-announcement");
+        
+        container.textContent = `!!You lost ${computerSelection} beats ${humanSelection}`;
+    }
 }
 
 // playGame();
@@ -40,17 +43,17 @@ const scissor = document.getElementById("Scissor");
 
 rock.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
-    console.log(playRound("stone", computerSelection));
+    playRound("stone", computerSelection);
 });
 
 paper.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
-    console.log(playRound("paper", computerSelection));
+    playRound("paper", computerSelection);
 });
 
 scissor.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
-    console.log(playRound("scissor", computerSelection));
+    playRound("scissor", computerSelection);
 });
 
 
