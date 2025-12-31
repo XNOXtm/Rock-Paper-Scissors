@@ -15,28 +15,33 @@ function getComputerChoice() {
 
 function playRound( humanSelection, computerSelection ) {
     if (humanSelection === computerSelection) {
-        
-        const container = document.querySelector("#result-announcement");
 
+        const displayScore = document.querySelector("#scoreBoard");
+        const container = document.querySelector("#result-announcement");
+        
+        displayScore.textContent = `Your Score: ${humanScore}     Computer Score: ${computerScore}`;
         container.textContent = `Draw you both choose ${humanSelection}`;
 
     } else if ( (computerSelection === "stone" && humanSelection === "paper") || (computerSelection === "paper" && humanSelection === "scissor") || (computerSelection === "scissor" && humanSelection === "stone") ) {
         
         humanScore += 1;
+        const displayScore = document.querySelector("#scoreBoard");
         const container = document.querySelector("#result-announcement");
-
+        
+        displayScore.textContent = `Your Score: ${humanScore}     Computer Score: ${computerScore}`;
         container.textContent = `You won! ${humanSelection} beats ${computerSelection}`;
         
     } else {
         
         computerScore += 1;
+        const displayScore = document.querySelector("#scoreBoard");
         const container = document.querySelector("#result-announcement");
         
+        displayScore.textContent = `Your Score: ${humanScore}     Computer Score: ${computerScore}`;
         container.textContent = `!!You lost ${computerSelection} beats ${humanSelection}`;
     }
 }
 
-// playGame();
 const rock = document.getElementById("Rock");
 const paper = document.getElementById("Paper");
 const scissor = document.getElementById("Scissor");
