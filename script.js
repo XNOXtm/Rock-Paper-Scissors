@@ -16,29 +16,37 @@ function getComputerChoice() {
 function playRound( humanSelection, computerSelection ) {
     if (humanSelection === computerSelection) {
 
-        const displayScore = document.querySelector("#scoreBoard");
+        scoreBoard();
         const container = document.querySelector("#result-announcement");
         
-        displayScore.textContent = `Your Score: ${humanScore}     Computer Score: ${computerScore}`;
         container.textContent = `Draw you both choose ${humanSelection}`;
 
     } else if ( (computerSelection === "stone" && humanSelection === "paper") || (computerSelection === "paper" && humanSelection === "scissor") || (computerSelection === "scissor" && humanSelection === "stone") ) {
         
         humanScore += 1;
-        const displayScore = document.querySelector("#scoreBoard");
+        scoreBoard();
         const container = document.querySelector("#result-announcement");
         
-        displayScore.textContent = `Your Score: ${humanScore}     Computer Score: ${computerScore}`;
         container.textContent = `You won! ${humanSelection} beats ${computerSelection}`;
         
     } else {
         
         computerScore += 1;
-        const displayScore = document.querySelector("#scoreBoard");
+        scoreBoard();
         const container = document.querySelector("#result-announcement");
         
-        displayScore.textContent = `Your Score: ${humanScore}     Computer Score: ${computerScore}`;
         container.textContent = `!!You lost ${computerSelection} beats ${humanSelection}`;
+    }
+}
+
+function scoreBoard() {
+    const displayScore = document.querySelector("#scoreBoard");
+    if (humanScore === 5) {
+        displayScore.textContent = "!!! YOU WON !!!";
+    } else if (computerScore === 5) {
+        displayScore.textContent = "YOU LOST";
+    } else {
+         displayScore.textContent = `Your Score: ${humanScore}     Computer Score: ${computerScore}`;
     }
 }
 
