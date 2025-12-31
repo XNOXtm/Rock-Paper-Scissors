@@ -47,10 +47,16 @@ function playRound( humanSelection, computerSelection ) {
 
 function scoreBoard() {
     const displayScore = document.querySelector("#scoreBoard");
+    const finalResult = document.querySelector("#final-result");
     if (humanScore === 5) {
-        displayScore.textContent = "!!! YOU WON !!!";
+        finalResult.textContent = "YOU WON";
+        finalResult.style.fontSize = "50px"
+        finalResult.style.fontWeight = "bold";
+        
     } else if (computerScore === 5) {
-        displayScore.textContent = "YOU LOST";
+        finalResult.textContent = "YOU LOST COMPUTER WINS";
+        finalResult.style.fontSize = "50px"
+        finalResult.style.fontWeight = "bold";
     } else {
          displayScore.textContent = `Your Score: ${humanScore}     Computer Score: ${computerScore}`;
     }
