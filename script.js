@@ -17,25 +17,31 @@ function playRound( humanSelection, computerSelection ) {
     if (humanSelection === computerSelection) {
 
         scoreBoard();
-        const container = document.querySelector("#result-announcement");
-        
-        container.textContent = `Draw you both choose ${humanSelection}`;
+        const container = document.querySelector("#round-result");
+        container.textContent = `DRAW`;
+
+        const reason = document.querySelector("#reason");
+        reason.textContent = `You both choose ${humanSelection}`;
 
     } else if ( (computerSelection === "stone" && humanSelection === "paper") || (computerSelection === "paper" && humanSelection === "scissor") || (computerSelection === "scissor" && humanSelection === "stone") ) {
         
         humanScore += 1;
         scoreBoard();
-        const container = document.querySelector("#result-announcement");
-        
-        container.textContent = `You won! ${humanSelection} beats ${computerSelection}`;
+        const container = document.querySelector("#round-result");
+        container.textContent = `YOU WIN`;
+
+        const reason = document.querySelector("#reason");
+        reason.textContent = `${humanSelection} beats ${computerSelection}`;
         
     } else {
         
         computerScore += 1;
         scoreBoard();
-        const container = document.querySelector("#result-announcement");
-        
-        container.textContent = `!!You lost ${computerSelection} beats ${humanSelection}`;
+        const container = document.querySelector("#round-result");
+        container.textContent = `YOU LOST`;
+
+        const reason = document.querySelector("#reason");
+        reason.textContent = `${computerSelection} beats ${humanSelection}`;
     }
 }
 
