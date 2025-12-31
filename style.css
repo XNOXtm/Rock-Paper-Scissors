@@ -4,3 +4,15 @@ body {
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             text-align: center;
         }
+#options {
+    display: flex;
+    gap: 38px;
+    justify-content: center;
+}
+.choices {
+    width: 60px;
+}
+#scissor {
+    display: flex;
+    
+}
